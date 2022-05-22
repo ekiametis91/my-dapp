@@ -1,4 +1,4 @@
-import { Button } from "@material-ui/core";
+import { Box } from "@material-ui/core";
 import { useWeb3React } from "@web3-react/core";
 import { TRANSAK_BASE_URL, TRANSAK_API_KEY, TRANSAK_REDIRECT_URL } from "../../config/constants/transak";
 
@@ -9,11 +9,15 @@ const Transak = () => {
 
   return (
     account ?
-    <Button variant="contained" onClick={() => {
-      window.open(transakUrl, "_blank", "noopener noreferrer");
-    }}>
-        Buy Crypto
-    </Button> : null
+      <Box style={{display: "contents"}}>
+        <h4>You can buy Crypto with Transak below</h4>
+        <iframe height="625" title="Transak On/Off Ramp Widget"
+          src={transakUrl}
+          frameBorder="no" allowTransparency={true} allowFullScreen={false}
+          style={{ display: "block", width: "100%", maxHeight: "800px", maxWidth: "500px" }}>
+        </iframe>
+      </Box>
+      : null
   );
 };
 

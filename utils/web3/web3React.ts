@@ -18,7 +18,7 @@ import { ConnectorConfig, ConnectorNames, ConnectorType } from './connectors'
 import { BinanceIcon, BloctoIcon, CoinbaseIcon, MetamaskIcon, TrustWalletIcon, UnstoppableIcon, WalletConnectIcon } from '../../components/svg'
 import { ChainId } from '../../config/constants/chain'
 
-const POLLING_INTERVAL = 12000
+const POLLING_INTERVAL = 5000
 const rpcUrl = getNodeUrl()
 const chainId = parseInt(CHAIN_ID, 10)
 

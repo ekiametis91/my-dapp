@@ -1,6 +1,6 @@
 import { Box, Button } from "@material-ui/core";
 import { useEffect, useState } from "react";
-import { WalletModal } from "./wallet.modal";
+import WalletModal from "./wallet.modal";
 import { connectorLocalStorageKey, Connectors, walletLocalStorageKey } from "../../utils/web3/web3React"
 import useAuth from "../../hooks/useAuth";
 import { useWeb3React } from "@web3-react/core";
@@ -63,7 +63,7 @@ const ConnectButton = ({ className }: { className: string }) => {
                 {Connectors.map((connector, index) => {
                     const { icon: Icon } = connector;
                     return (
-                        <Box key={index} onClick={(() => connect(connector))}>
+                        <Box key={index} onClick={(() => connect(connector))} style={{ cursor: "pointer"}}>
                             <Icon width="40px" mb="8px"></Icon>
                             <h5 style={{ fontSize: "14px" }}>{connector.title}</h5>
                         </Box>
