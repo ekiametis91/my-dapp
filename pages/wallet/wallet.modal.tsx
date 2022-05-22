@@ -30,7 +30,7 @@ const StyledModalOverlay = styled.div`
   background-color: rgba(0, 0, 0, 0.5);
 `;
 
-export const WalletModal = ({
+const WalletModal = ({
     onClose,
     show,
     children
@@ -63,13 +63,14 @@ export const WalletModal = ({
         </StyledModalOverlay>
     ) : null;
 
-    if (isBrowser) {
-        return ReactDOM.createPortal(
-            modalContent,
-            document.getElementById("modal-root") as Element
-        );
-    } else {
-        return <div></div>;
-    }
-
+    return (
+        isBrowser ? 
+            ReactDOM.createPortal(
+                modalContent,
+                document.getElementById("modal-root") as Element
+            ) :
+            <div></div>
+    )
 }
+
+export default WalletModal;
