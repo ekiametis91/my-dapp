@@ -6,13 +6,14 @@ import useAuth from "../../hooks/useAuth";
 import { useWeb3React } from "@web3-react/core";
 import useAccount from "../../hooks/useAccount";
 import { Balance } from "../../components/balance/balance";
+import { ConnectorNames } from "../../utils/web3/connectors";
 
 const ConnectButton = ({ className }: { className: string }) => {
     const { login, logout } = useAuth();
     const { account } = useWeb3React()
     const { callAccount } = useAccount()
     const [showModal, setShowModal] = useState<boolean>(false);
-    const [address, setAddress] = useState<string>(account)
+    const [address, setAddress] = useState<string>(account);
 
     const connect = (connector) => {
         if (!window.ethereum && connector.title === "Metamask" && connector.href) {
@@ -40,6 +41,10 @@ const ConnectButton = ({ className }: { className: string }) => {
             })
     }, [callAccount, account])
 
+    const getLabel = (): string => {
+        return localStorage?.getItem(connectorLocalStorageKey) === ConnectorNames.UAuthUnstoppable ? "Domain": "Address";
+    }
+
 
     return (
         <div className={className}>
@@ -48,7 +53,8 @@ const ConnectButton = ({ className }: { className: string }) => {
                     Connect your wallet
                 </Button> :
                 <Box>
-                    <h2>Address: {address}</h2>
+                    <h2>{getLabel()}: {address}</h2>
+                    
                     <Button variant="contained" onClick={(() => disconnect())}>
                         Disconnect your wallet
                     </Button>

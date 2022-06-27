@@ -1,9 +1,19 @@
-This is a project to connect to different decentralized wallet where the purpose of the project is to advance and to include as much as possible features to demonstrate the capability power to use **web 3.0 + blockchain**.
+This is a project called `My Dapp`. It's made to connect to different decentralized wallets where the purpose of the project is to advance and to include as much as possible features to demonstrate the capability power to use **web 3.0 + blockchain**.
 
 ## Creator
 
 - **Contact**: `Emmanuel Kiametis - ekiametis.servicos@gmail.com`
 - **Discord ID**: `ekiametis91#3383`
+
+## Integration Unstoppable Domains login
+
+You have the option to login with a provider called Unstoppable Domains. With Unstoppable Domains you are able to use you Metamask wallet under the hood and use your domain to receive cryptos.
+
+When you Connect your wallet with Unstoppable Domains your domain will be displayed in the initial screen and you'll be guided to see your domain instead of the wallet address.
+
+Below is all the information about it:
+
+- **Demo video**: https://youtu.be/FOuPRHJUiFc
 
 ## Integration with Transak
 
