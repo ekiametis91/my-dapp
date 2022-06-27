@@ -13,6 +13,7 @@ When you Connect your wallet with Unstoppable Domains your domain will be displa
 
 Below is all the information about it:
 
+- **PR related**: https://github.com/ekiametis91/my-dapp/pull/2
 - **Demo video**: https://youtu.be/FOuPRHJUiFc
 
 ## Integration with Transak
@@ -26,7 +27,6 @@ Below is the Pull Request which was added this feature and a demo video:
 To see how to include fake data and test it, please click on this [link](https://transak.gitbook.io/transak-docs/quick-guides/testing-your-integration-and-customization-setup).
 
 - **Metamask network**: Kovan Test Network
-- **Live URL**: http://my-dapp.westus2.cloudapp.azure.com:3000
 - **PR related**: https://github.com/ekiametis91/my-dapp/pull/1
 - **Demo video**: https://youtu.be/XTR8ELcHK3o
 
